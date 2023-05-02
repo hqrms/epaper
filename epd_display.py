@@ -9,8 +9,8 @@ import PIL
 
 epd = epd3in7.EPD()
 logging.info("init and Clear")
-epd.init(0)
-epd.Clear(0xFF, 0)
+epd.init(1)
+epd.Clear(0xFF, 1)
 
 
 
@@ -20,8 +20,10 @@ bmp = bmp.rotate(90, PIL.Image.NEAREST, expand = 1)
 bmp = bmp.resize((100, 100))
 bmp2 = bmp.resize((100, 200))
 Himage2.paste(bmp, (280,0))
+epd.display_4Gray(epd.getbuffer_4Gray(Himage2))
+
+time.sleep(3)
 Himage2.paste(bmp, (0,50))
 epd.display_4Gray(epd.getbuffer_4Gray(Himage2))
-time.sleep(5)
 
 
