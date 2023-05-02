@@ -20,7 +20,7 @@ bmp = bmp.rotate(90, PIL.Image.NEAREST, expand = 1)
 
 bmp = bmp.resize((100, 100))
 
-Himage2.paste(bmp, (280,280))
+Himage2.paste(bmp, (280,0))
 epd.display_4Gray(epd.getbuffer_4Gray(Himage2))
 time.sleep(5)
 
