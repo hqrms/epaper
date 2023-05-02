@@ -17,10 +17,7 @@ Himage2 = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame
 bmp = Image.open("/home/epaper/test2.png")
 bmp = bmp.rotate(90, PIL.Image.NEAREST, expand = 1)
 
-basewidth = 30
-wpercent = (basewidth/float(bmp.size[0]))
-hsize = int((float(bmp.size[1])*float(wpercent)))
-bmp = bmp.resize((basewidth,hsize), Image.Resampling.LANCZOS)
+bmp = bmp.resize((30, 30))
 
 Himage2.paste(bmp, (0,0))
 epd.display_4Gray(epd.getbuffer_4Gray(Himage2))
