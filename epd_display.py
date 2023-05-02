@@ -11,5 +11,5 @@ logging.info("init and Clear")
 epd.init(0)
 epd.Clear(0xFF, 0)
 
-img= Image.open(r"/home/epaper/test.png")
-epd.display_4Gray(epd.getbuffer_4Gray(Himage))
+img = Image.open(r"/home/epaper/test.png")
+epd.display_4Gray(epd.getbuffer_4Gray(img))
