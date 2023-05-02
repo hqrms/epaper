@@ -9,8 +9,8 @@ import PIL
 
 epd = epd3in7.EPD()
 logging.info("init and Clear")
-epd.init(1)
-epd.Clear(0xFF, 1)
+epd.init(0)
+epd.Clear(0xFF, 0)
 
 
 
