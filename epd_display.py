@@ -25,7 +25,4 @@ bmp2 = bmp.resize((100, 200))
 #time.sleep(5)
 
 draw = ImageDraw.Draw(Himage2)
-while True:
-   draw.rectangle((10, 10, 120, 50), fill = 255)
-   time.sleep(3)
-   draw.rectangle((10, 10, 120, 50), fill = 0)
+draw.rectangle((130, 20, 274, 56), 'black', 'black')
