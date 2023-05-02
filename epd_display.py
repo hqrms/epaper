@@ -17,14 +17,14 @@ epd.Clear(0xFF, 0)
 Himage2 = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame
 bmp = Image.open("/home/epaper/test2.png")
 bmp = bmp.rotate(90, PIL.Image.NEAREST, expand = 1)
-
 bmp = bmp.resize((100, 100))
 bmp2 = bmp.resize((100, 200))
+#Himage2.paste(bmp, (280,0))
+#Himage2.paste(bmp, (0,50))
+#epd.display_4Gray(epd.getbuffer_4Gray(Himage2))
+#time.sleep(5)
 
-Himage2.paste(bmp, (280,0))
-
-Himage2.paste(bmp, (0,50))
-
-epd.display_4Gray(epd.getbuffer_4Gray(Himage2))
-time.sleep(5)
-
+draw = ImageDraw.Draw(Himage2)
+for i in range(280):
+   draw.rectangle((1, 1, i, i), 'black', 'black')
+   epd.display_4Gray(epd.getbuffer_4Gray(Limage))
