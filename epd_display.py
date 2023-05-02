@@ -5,6 +5,7 @@ from waveshare_epd import epd3in7
 import time
 from PIL import Image,ImageDraw,ImageFont
 import traceback
+import PIL
 
 epd = epd3in7.EPD()
 logging.info("init and Clear")
