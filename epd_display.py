@@ -9,8 +9,8 @@ import PIL
 
 epd = epd3in7.EPD()
 logging.info("init and Clear")
-epd.init(0)
-epd.Clear(0xFF, 0)
+epd.init(1)
+epd.Clear(0xFF, 1)
 
 
 
@@ -26,5 +26,5 @@ bmp2 = bmp.resize((100, 200))
 
 draw = ImageDraw.Draw(Himage2)
 for i in range(280):
-   draw.rectangle((1, 1, i, i), 'black', 'black')
+   draw.rectangle((10, 10, i, i), 'black', 'black')
    epd.display_4Gray(epd.getbuffer_4Gray(Himage2))
