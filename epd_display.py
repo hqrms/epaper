@@ -14,13 +14,7 @@ epd.Clear(0xFF, 0)
 
 Himage = Image.new('L', (epd.height, epd.width), 0xFF)  # 0xFF: clear the frame
 draw = ImageDraw.Draw(Himage)
-draw.text((10, 0), 'hello world', font = font24, fill = 0)
-draw.text((10, 20), '3.7inch e-Paper', font = font24, fill = 0)
 draw.rectangle((10, 110, 154, 146), 'black', 'black')
-draw.text((10, 110), u'微雪电子', font = font36, fill = epd.GRAY1)
-draw.text((10, 150), u'微雪电子', font = font36, fill = epd.GRAY2)
-draw.text((10, 190), u'微雪电子', font = font36, fill = epd.GRAY3)
-draw.text((10, 230), u'微雪电子', font = font36, fill = epd.GRAY4)
 draw.line((20, 50, 70, 100), fill = 0)
 draw.line((70, 50, 20, 100), fill = 0)
 draw.rectangle((20, 50, 70, 100), outline = 0)
