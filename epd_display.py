@@ -14,7 +14,7 @@ epd.Clear(0xFF, 0)
 
 
 Himage2 = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame
-bmp = Image.open("/home/epaper/test.png")
-Himage2.paste(bmp, (200,50))
+bmp = Image.open("/home/epaper/test2.png")
+Himage2.paste(bmp, (140,240))
 epd.display_4Gray(epd.getbuffer_4Gray(Himage2))
 time.sleep(5)
