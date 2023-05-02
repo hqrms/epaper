@@ -28,4 +28,4 @@ draw = ImageDraw.Draw(Himage2)
 while True:
    draw.rectangle((10, 10, 120, 50), fill = 255)
    time.sleep(3)
-   draw.rectangle((10, 10, 120, 50), fill = 255)
+   draw.rectangle((10, 10, 120, 50), fill = 0)
