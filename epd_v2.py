@@ -82,5 +82,8 @@ canvas2 = DrawingBoard()
 
 canvas2.paste_image(img, [100,0])
 partial_epd.update_display(canvas2.board)
+
+canvas2.paste_image(img, [100,0])
+partial_epd.update_display(canvas2.board)
 partial_epd.display_sleep()
 
