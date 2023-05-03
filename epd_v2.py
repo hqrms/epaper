@@ -29,6 +29,8 @@ class DisplayManager():
     def update_display(self, board):
         self.epd.display_4Gray(self.epd.getbuffer_4Gray(board))
 
+    def display_sleep(self):
+        self.epd.sleep()
 
 class DrawingBoard():
     def __init__(self, height = 480, width = 280, color = 0xFF): 
@@ -56,4 +58,10 @@ img = img.resize((200, 100))
 canvas.paste_image(img, [280,0])
 epd.update_display(canvas.board)
 
+# Partial update test
 
+partial_epd = DisplayManager(1)
+
+canvas.paste_image(img, [0,30])
+epd.update_display(canvas.board)
+epd.display_sleep()
