@@ -58,7 +58,6 @@ class FontManager():
     def draw_font(self, board):
         draw = ImageDraw.Draw(board)
         draw.text((10, 0), 'Hello World', font = self.font, fill = 0)
-        draw.text((2, 0), 'hello world', font = self.font, fill = 0)
 
         
 epd = DisplayManager()
@@ -69,7 +68,6 @@ epd.init_display()
 epd.clear_display()
 
 img = Image.open("/home/epaper/test2.png")
-img = img.rotate(90, PIL.Image.NEAREST, expand = 1)
 img = img.resize((200, 100))
 
 canvas.paste_image(img, [0,0])
