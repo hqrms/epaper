@@ -75,8 +75,12 @@ epd.update_display(canvas.board)
 
 # Partial update test
 
-partial_epd = DisplayManager(1)
+# Partial update test
 
-font.draw_font(canvas.board)
-epd.update_display(canvas.board)
-epd.display_sleep()
+partial_epd = DisplayManager(1)
+canvas2 = DrawingBoard()
+
+canvas2.paste_image(img, [100,0])
+partial_epd.update_display(canvas2.board)
+partial_epd.display_sleep()
+
