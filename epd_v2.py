@@ -33,10 +33,15 @@ class DisplayManager():
         self.epd.sleep()
 
 class DrawingBoard():
-    def __init__(self, height = 480, width = 280, color = 0xFF): 
-        self.height = height
-        self.width = width
-        self.color = color 
+    def __init__(self, vertical = True, dimension = [280,480]): 
+        if vertical:
+            self.height = dimension[0]
+            self.width = dimension[1]
+        else:
+            self.height = dimension[1]
+            self.width = dimension[0]
+
+        self.color = 0xFF 
         self.greyscale = "L"
         self.board = Image.new(self.greyscale, (self.height, self.width), self.color)
 
@@ -54,7 +59,6 @@ class FontManager():
         draw = ImageDraw.Draw(board)
         draw.text((10, 0), 'Hello World', font = self.font, fill = 0)
         draw.text((2, 0), 'hello world', font = self.font, fill = 0)
-
 
         
 epd = DisplayManager()
