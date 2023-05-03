@@ -44,9 +44,20 @@ class DrawingBoard():
         x,y = position
         self.board.paste(image, (x,y))
 
+class FontManager():
+    def __init__(self, size = 24):
+        self.size = size 
+        self.font_path = '/home/epaper/OpenSans-Regular.ttf'
+        self.font = ImageFont.truetype(self.font_path, self.size)
 
+    def draw_font(self, board):
+        draw = ImageDraw.Draw(board)
+        draw.text((10, 0), 'Hello World', font = self.font, fill = 0)
+
+        
 epd = DisplayManager()
 canvas = DrawingBoard()
+font = FontManager()
 
 epd.init_display()
 epd.clear_display()
@@ -62,6 +73,6 @@ epd.update_display(canvas.board)
 
 partial_epd = DisplayManager(1)
 
-canvas.paste_image(img, [0,30])
+font.draw_font(canvas.board)
 epd.update_display(canvas.board)
 epd.display_sleep()
