@@ -27,7 +27,7 @@ class DisplayManager():
         logging.info("Display Init")
 
     def update_display(self, board):
-        self.epd.display_4Gray(epd.getbuffer_4Gray(board))
+        self.epd.display_4Gray(self.epd.getbuffer_4Gray(board))
 
 
 class DrawingBoard():
