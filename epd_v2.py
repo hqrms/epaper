@@ -68,7 +68,7 @@ epd.init_display()
 epd.clear_display()
 
 img = Image.open("/home/epaper/test2.png")
-img = img.resize((200, 100))
+img = img.resize((100, 200))
 
 canvas.paste_image(img, [0,0])
 epd.update_display(canvas.board)
