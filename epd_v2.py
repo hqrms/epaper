@@ -53,6 +53,8 @@ class FontManager():
     def draw_font(self, board):
         draw = ImageDraw.Draw(board)
         draw.text((10, 0), 'Hello World', font = self.font, fill = 0)
+        draw.text((2, 0), 'hello world', font = self.font, fill = 0)
+
 
         
 epd = DisplayManager()
