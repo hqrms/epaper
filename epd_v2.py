@@ -72,7 +72,7 @@ img = Image.open("/home/epaper/test2.png")
 img = img.rotate(90, PIL.Image.NEAREST, expand = 1)
 img = img.resize((200, 100))
 
-canvas.paste_image(img, [280,0])
+canvas.paste_image(img, [0,0])
 epd.update_display(canvas.board)
 
 # Partial update test
