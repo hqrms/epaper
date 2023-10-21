@@ -1,0 +1,13 @@
+Interface:
+
+	Opcoes: 
+		> Home
+		> Arquivos
+			> Escolher Arquivo
+			> Criar Arquivo
+			> Deletar Arquivo
+		> Desligar
+		> Terminal
+		
+		
+	

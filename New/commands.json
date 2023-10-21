@@ -1,0 +1,6 @@
+{
+	"save_file"    : ["Key.crtl", "s"],
+	"open_file"   : ["Key.crtl", "o"],
+	"select_all"  : ["Key.crtl", "a"],
+	"undo"           : ["Key.crtl", "z"]
+}
